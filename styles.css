@@ -1,0 +1,188 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e Fundo */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #f9f1f0);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho com efeito de neve */
+header {
+    background: #a00a0a;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Efeito de neve */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    z-index: 1000;
+    color: white;
+    font-size: 1.5em;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh); }
+}
+
+/* Seção de Produtos */
+.products-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.products-category {
+    margin: 30px 0;
+    padding: 20px;
+    border: 1px solid #d9b3b3;
+    border-radius: 10px;
+    background: #f9ebeb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.products-category h2 {
+    color: #a00a0a;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.product-item {
+    font-size: 1.1em;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Informações de Encomenda e Pagamento */
+.info-section {
+    background: #f2d8d5;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 4px solid #a00a0a;
+}
+
+.info-section h3 {
+    color: #a00a0a;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.info-text {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Contato */
+.contact {
+    background: #f9ebeb;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 4px solid #a00a0a;
+}
+
+.contact h3 {
+    color: #a00a0a;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact input, .contact textarea {
+    width: 90%;
+    max-width: 500px;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact button {
+    padding: 12px 30px;
+    background: #a00a0a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.contact button:hover {
+    background: #bf3030;
+}
+
+/* Ícones de redes sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: #a00a0a;
+    font-size: 2em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #bf3030;
+}
+
+/* Rodapé */
+footer {
+    background: #a00a0a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 { font-size: 2.4em; }
+    .contact input, .contact textarea { width: 95%; }
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        gap: 15px;
+    }
+}
